@@ -1,0 +1,600 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		871977382903071E000226C0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 871977372903071E000226C0 /* AppDelegate.swift */; };
+		8719773A2903071E000226C0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 871977392903071E000226C0 /* ViewController.swift */; };
+		8719773C29030720000226C0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8719773B29030720000226C0 /* Assets.xcassets */; };
+		8719773F29030720000226C0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8719773D29030720000226C0 /* Main.storyboard */; };
+		8719774A29030720000226C0 /* NitroMacTest_sergejpTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8719774929030720000226C0 /* NitroMacTest_sergejpTests.swift */; };
+		8719775429030720000226C0 /* NitroMacTest_sergejpUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8719775329030720000226C0 /* NitroMacTest_sergejpUITests.swift */; };
+		8719775629030720000226C0 /* NitroMacTest_sergejpUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8719775529030720000226C0 /* NitroMacTest_sergejpUITestsLaunchTests.swift */; };
+		871977632903073F000226C0 /* RectIntersectionFinder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 871977622903073F000226C0 /* RectIntersectionFinder.swift */; };
+		87197769290310D7000226C0 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87197768290310D7000226C0 /* Model.swift */; };
+		8719776B2903128E000226C0 /* RectJSONParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8719776A2903128E000226C0 /* RectJSONParser.swift */; };
+		8719776D29035579000226C0 /* Rect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8719776C29035579000226C0 /* Rect.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8719774629030720000226C0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8719772C2903071E000226C0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 871977332903071E000226C0;
+			remoteInfo = "NitroMacTest-sergejp";
+		};
+		8719775029030720000226C0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8719772C2903071E000226C0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 871977332903071E000226C0;
+			remoteInfo = "NitroMacTest-sergejp";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		871977342903071E000226C0 /* NitroMacTest-sergejp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NitroMacTest-sergejp.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		871977372903071E000226C0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		871977392903071E000226C0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		8719773B29030720000226C0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8719773E29030720000226C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8719774029030720000226C0 /* NitroMacTest_sergejp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = NitroMacTest_sergejp.entitlements; sourceTree = "<group>"; };
+		8719774529030720000226C0 /* NitroMacTest-sergejpTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "NitroMacTest-sergejpTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8719774929030720000226C0 /* NitroMacTest_sergejpTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NitroMacTest_sergejpTests.swift; sourceTree = "<group>"; };
+		8719774F29030720000226C0 /* NitroMacTest-sergejpUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "NitroMacTest-sergejpUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8719775329030720000226C0 /* NitroMacTest_sergejpUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NitroMacTest_sergejpUITests.swift; sourceTree = "<group>"; };
+		8719775529030720000226C0 /* NitroMacTest_sergejpUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NitroMacTest_sergejpUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		871977622903073F000226C0 /* RectIntersectionFinder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RectIntersectionFinder.swift; sourceTree = "<group>"; };
+		87197768290310D7000226C0 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		8719776A2903128E000226C0 /* RectJSONParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RectJSONParser.swift; sourceTree = "<group>"; };
+		8719776C29035579000226C0 /* Rect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rect.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		871977312903071E000226C0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8719774229030720000226C0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8719774C29030720000226C0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8719772B2903071E000226C0 = {
+			isa = PBXGroup;
+			children = (
+				871977362903071E000226C0 /* NitroMacTest-sergejp */,
+				8719774829030720000226C0 /* NitroMacTest-sergejpTests */,
+				8719775229030720000226C0 /* NitroMacTest-sergejpUITests */,
+				871977352903071E000226C0 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		871977352903071E000226C0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				871977342903071E000226C0 /* NitroMacTest-sergejp.app */,
+				8719774529030720000226C0 /* NitroMacTest-sergejpTests.xctest */,
+				8719774F29030720000226C0 /* NitroMacTest-sergejpUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		871977362903071E000226C0 /* NitroMacTest-sergejp */ = {
+			isa = PBXGroup;
+			children = (
+				871977372903071E000226C0 /* AppDelegate.swift */,
+				871977392903071E000226C0 /* ViewController.swift */,
+				8719773B29030720000226C0 /* Assets.xcassets */,
+				8719773D29030720000226C0 /* Main.storyboard */,
+				8719774029030720000226C0 /* NitroMacTest_sergejp.entitlements */,
+				8719776C29035579000226C0 /* Rect.swift */,
+				871977622903073F000226C0 /* RectIntersectionFinder.swift */,
+				8719776A2903128E000226C0 /* RectJSONParser.swift */,
+				87197768290310D7000226C0 /* Model.swift */,
+			);
+			path = "NitroMacTest-sergejp";
+			sourceTree = "<group>";
+		};
+		8719774829030720000226C0 /* NitroMacTest-sergejpTests */ = {
+			isa = PBXGroup;
+			children = (
+				8719774929030720000226C0 /* NitroMacTest_sergejpTests.swift */,
+			);
+			path = "NitroMacTest-sergejpTests";
+			sourceTree = "<group>";
+		};
+		8719775229030720000226C0 /* NitroMacTest-sergejpUITests */ = {
+			isa = PBXGroup;
+			children = (
+				8719775329030720000226C0 /* NitroMacTest_sergejpUITests.swift */,
+				8719775529030720000226C0 /* NitroMacTest_sergejpUITestsLaunchTests.swift */,
+			);
+			path = "NitroMacTest-sergejpUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		871977332903071E000226C0 /* NitroMacTest-sergejp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8719775929030720000226C0 /* Build configuration list for PBXNativeTarget "NitroMacTest-sergejp" */;
+			buildPhases = (
+				871977302903071E000226C0 /* Sources */,
+				871977312903071E000226C0 /* Frameworks */,
+				871977322903071E000226C0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "NitroMacTest-sergejp";
+			productName = "NitroMacTest-sergejp";
+			productReference = 871977342903071E000226C0 /* NitroMacTest-sergejp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		8719774429030720000226C0 /* NitroMacTest-sergejpTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8719775C29030720000226C0 /* Build configuration list for PBXNativeTarget "NitroMacTest-sergejpTests" */;
+			buildPhases = (
+				8719774129030720000226C0 /* Sources */,
+				8719774229030720000226C0 /* Frameworks */,
+				8719774329030720000226C0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8719774729030720000226C0 /* PBXTargetDependency */,
+			);
+			name = "NitroMacTest-sergejpTests";
+			productName = "NitroMacTest-sergejpTests";
+			productReference = 8719774529030720000226C0 /* NitroMacTest-sergejpTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		8719774E29030720000226C0 /* NitroMacTest-sergejpUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8719775F29030720000226C0 /* Build configuration list for PBXNativeTarget "NitroMacTest-sergejpUITests" */;
+			buildPhases = (
+				8719774B29030720000226C0 /* Sources */,
+				8719774C29030720000226C0 /* Frameworks */,
+				8719774D29030720000226C0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8719775129030720000226C0 /* PBXTargetDependency */,
+			);
+			name = "NitroMacTest-sergejpUITests";
+			productName = "NitroMacTest-sergejpUITests";
+			productReference = 8719774F29030720000226C0 /* NitroMacTest-sergejpUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8719772C2903071E000226C0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1340;
+				LastUpgradeCheck = 1340;
+				TargetAttributes = {
+					871977332903071E000226C0 = {
+						CreatedOnToolsVersion = 13.4.1;
+					};
+					8719774429030720000226C0 = {
+						CreatedOnToolsVersion = 13.4.1;
+						TestTargetID = 871977332903071E000226C0;
+					};
+					8719774E29030720000226C0 = {
+						CreatedOnToolsVersion = 13.4.1;
+						TestTargetID = 871977332903071E000226C0;
+					};
+				};
+			};
+			buildConfigurationList = 8719772F2903071E000226C0 /* Build configuration list for PBXProject "NitroMacTest-sergejp" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8719772B2903071E000226C0;
+			productRefGroup = 871977352903071E000226C0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				871977332903071E000226C0 /* NitroMacTest-sergejp */,
+				8719774429030720000226C0 /* NitroMacTest-sergejpTests */,
+				8719774E29030720000226C0 /* NitroMacTest-sergejpUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		871977322903071E000226C0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8719773C29030720000226C0 /* Assets.xcassets in Resources */,
+				8719773F29030720000226C0 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8719774329030720000226C0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8719774D29030720000226C0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		871977302903071E000226C0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				871977632903073F000226C0 /* RectIntersectionFinder.swift in Sources */,
+				8719776D29035579000226C0 /* Rect.swift in Sources */,
+				8719776B2903128E000226C0 /* RectJSONParser.swift in Sources */,
+				8719773A2903071E000226C0 /* ViewController.swift in Sources */,
+				871977382903071E000226C0 /* AppDelegate.swift in Sources */,
+				87197769290310D7000226C0 /* Model.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8719774129030720000226C0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8719774A29030720000226C0 /* NitroMacTest_sergejpTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8719774B29030720000226C0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8719775629030720000226C0 /* NitroMacTest_sergejpUITestsLaunchTests.swift in Sources */,
+				8719775429030720000226C0 /* NitroMacTest_sergejpUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8719774729030720000226C0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 871977332903071E000226C0 /* NitroMacTest-sergejp */;
+			targetProxy = 8719774629030720000226C0 /* PBXContainerItemProxy */;
+		};
+		8719775129030720000226C0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 871977332903071E000226C0 /* NitroMacTest-sergejp */;
+			targetProxy = 8719775029030720000226C0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		8719773D29030720000226C0 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8719773E29030720000226C0 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8719775729030720000226C0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 12.3;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		8719775829030720000226C0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 12.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		8719775A29030720000226C0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "NitroMacTest-sergejp/NitroMacTest_sergejp.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = YZTD8PAZRW;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSMainStoryboardFile = Main;
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.pershaj.NitroMacTest-sergejp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		8719775B29030720000226C0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "NitroMacTest-sergejp/NitroMacTest_sergejp.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = YZTD8PAZRW;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSMainStoryboardFile = Main;
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.pershaj.NitroMacTest-sergejp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		8719775D29030720000226C0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = YZTD8PAZRW;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 12.3;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.pershaj.NitroMacTest-sergejpTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NitroMacTest-sergejp.app/Contents/MacOS/NitroMacTest-sergejp";
+			};
+			name = Debug;
+		};
+		8719775E29030720000226C0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = YZTD8PAZRW;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 12.3;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.pershaj.NitroMacTest-sergejpTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NitroMacTest-sergejp.app/Contents/MacOS/NitroMacTest-sergejp";
+			};
+			name = Release;
+		};
+		8719776029030720000226C0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = YZTD8PAZRW;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.pershaj.NitroMacTest-sergejpUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = "NitroMacTest-sergejp";
+			};
+			name = Debug;
+		};
+		8719776129030720000226C0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = YZTD8PAZRW;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.pershaj.NitroMacTest-sergejpUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = "NitroMacTest-sergejp";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8719772F2903071E000226C0 /* Build configuration list for PBXProject "NitroMacTest-sergejp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8719775729030720000226C0 /* Debug */,
+				8719775829030720000226C0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8719775929030720000226C0 /* Build configuration list for PBXNativeTarget "NitroMacTest-sergejp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8719775A29030720000226C0 /* Debug */,
+				8719775B29030720000226C0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8719775C29030720000226C0 /* Build configuration list for PBXNativeTarget "NitroMacTest-sergejpTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8719775D29030720000226C0 /* Debug */,
+				8719775E29030720000226C0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8719775F29030720000226C0 /* Build configuration list for PBXNativeTarget "NitroMacTest-sergejpUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8719776029030720000226C0 /* Debug */,
+				8719776129030720000226C0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8719772C2903071E000226C0 /* Project object */;
+}
