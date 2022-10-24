@@ -37,7 +37,7 @@ final class MainViewModel {
         let totalIntersections: String
     }
     
-    private let rectsProcessingLimit = 10
+    private let rectsProcessingLimit = 13
     
     func findIntersections(inRectsFrom url: URL) -> Result<FindIntersectionsResult, FindIntersectionsError> {
         do {

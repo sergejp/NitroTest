@@ -266,7 +266,7 @@ class NitroMacTest_sergejpTests: XCTestCase {
     func testPerformanceIntersection() throws {
         let processor = RectIntersectionFinder()
         var rects = [Rect]()
-        let rectNum = 10
+        let rectNum = 13
         for i in 1...rectNum {
             let rect = Rect(id: UInt(i),
                             x: 10 + i,

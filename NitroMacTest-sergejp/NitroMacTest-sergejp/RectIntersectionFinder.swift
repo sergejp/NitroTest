@@ -13,6 +13,66 @@ struct RectIntersectionFinder {
         // duplicates will be dismissed automatically with a Set
         var result = Set<RectIntersection>()
         var elements = Array(rects[...])
+        
+        var rectToIntersectionMap = Dictionary<Rect, Set<RectIntersection>>()
+        
+        // first pass computes basic intersections between rects
+        // i.e. rect pairs with common areas
+        // O(n^2)
+        while let r1 = elements.popLast() {
+            for r2 in elements {
+                // kinda O(1), although there is quite a bit of ops inside `intersectionArea`
+                guard let area = r1.intersectionArea(with: r2) else {
+                    continue
+                }
+                let newIntersection = RectIntersection(area: area, rects: [r1, r2])
+                // O(1) on avg
+                result.insert(newIntersection)
+                
+                if rectToIntersectionMap[r1] == nil {
+                    rectToIntersectionMap[r1] = Set<RectIntersection>()
+                }
+                rectToIntersectionMap[r1]?.insert(newIntersection)
+                
+                if rectToIntersectionMap[r2] == nil {
+                    rectToIntersectionMap[r2] = Set<RectIntersection>()
+                }
+                rectToIntersectionMap[r2]?.insert(newIntersection)
+            }
+        }
+        
+        // second pass computes intersections between intersections
+        elements = Array(rects[...])
+        for (_, intersections) in rectToIntersectionMap {
+            guard intersections.count > 1 else {
+                continue
+            }
+            var intersectionsArr = Array(intersections[...])
+            for intersection1 in intersectionsArr {
+                for intersection2 in intersectionsArr {
+                    guard intersection1 != intersection2 else {
+                        continue
+                    }
+                    guard let area = intersection1.area.intersectionArea(with: intersection2.area) else {
+                        continue
+                    }
+                    let newIntersection = RectIntersection(area: area, rects: intersection1.rects.union(intersection2.rects))
+                    
+                    result.insert(newIntersection)
+                    
+                    intersectionsArr.append(newIntersection)
+                }
+            }
+        }
+
+        return result
+    }
+    
+    /*
+    func find(in rects: [Rect]) -> Set<RectIntersection> {
+        // duplicates will be dismissed automatically with a Set
+        var result = Set<RectIntersection>()
+        var elements = Array(rects[...])
         var rectsWithIntersections = Set<Rect>()
         // first pass computes basic intersections between rects
         // i.e. rect pairs with common areas
@@ -31,11 +91,11 @@ struct RectIntersectionFinder {
                 rectsWithIntersections.insert(r2)
             }
         }
-        
+
         // second pass computes intersections between rects and intersections
         // already in the result
         var intersections = Set(result[...])
-        
+
         // Correctness
         // Comes from the fact that this is exhaustive search as it goes
         // through ALL intersections progressively and checks each of them
@@ -63,21 +123,21 @@ struct RectIntersectionFinder {
                 guard let area = rect.intersectionArea(with: intersection.area) else {
                     continue
                 }
-                
+
                 // hard to find time complexity for Set's union operation, but logically
                 // it should be `insert` for each item in the `other` set, so in this case
                 // it would be O(1) as it's only one element in the `other` set
                 let newIntersection = RectIntersection(area: area, rects: intersection.rects.union([rect]))
-                
+
                 // we add intersection inside the loop, so the loop extends all the time
                 intersections.insert(newIntersection)
-                
+
                 // add intersection to final result as well
                 result.insert(newIntersection)
             }
         }
 
         return result
-    }
+    }*/
     
 }
