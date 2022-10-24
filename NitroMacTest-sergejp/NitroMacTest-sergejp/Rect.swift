@@ -7,6 +7,32 @@
 
 import Foundation
 
+struct Rect: Hashable, Comparable, RectRepresentable {
+    static func < (lhs: Rect, rhs: Rect) -> Bool {
+        lhs.id < rhs.id
+    }
+    
+    let id: UInt
+    // x, y coordinates can be negative, hence signed int
+    let x: Int
+    let y: Int
+    // width and height are "never negative", so unsigned int as a type
+    let w: UInt
+    let h: UInt
+}
+
+struct Area: Hashable, RectRepresentable {
+    let x: Int
+    let y: Int
+    let w: UInt
+    let h: UInt
+}
+
+struct RectIntersection: Hashable {
+    let area: Area
+    let rects: Set<Rect>
+}
+
 protocol RectRepresentable: Hashable {
     var x: Int { get }
     var y: Int { get }
@@ -50,26 +76,4 @@ extension RectRepresentable {
             h: UInt(min(bottomEdge, other.y + Int(other.h)) - max(self.y, other.y)))
     }
     
-}
-
-struct Rect: Hashable, RectRepresentable {
-    let id: UInt
-    // x, y coordinates can be negative, hence signed int
-    let x: Int
-    let y: Int
-    // width and height are "never negative", so unsigned int as a type
-    let w: UInt
-    let h: UInt
-}
-
-struct Area: Hashable, RectRepresentable {
-    let x: Int
-    let y: Int
-    let w: UInt
-    let h: UInt
-}
-
-struct RectIntersection: Hashable {
-    let area: Area
-    let rects: Set<Rect>
 }

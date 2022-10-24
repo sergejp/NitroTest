@@ -71,6 +71,17 @@ class NitroMacTest_sergejpTests: XCTestCase {
         XCTAssertTrue(intersections.contains(case1), "No intersection found between \(case1.rects)")
     }
     
+    func testIntersectionWithSameArea() throws {
+        let finder = RectIntersectionFinder()
+        let rects = [
+            Rect(id: 1, x: 1, y: 100, w: 100, h: 100),
+            Rect(id: 2, x: 1, y: 100, w: 100, h: 100)
+        ]
+        let intersections = finder.find(in: rects)
+        let case1 = RectIntersection(area: Area(x: 1, y: 100, w: 100, h: 100), rects: [rects[0], rects[1]])
+        XCTAssertTrue(intersections.contains(case1), "No intersection found between \(case1.rects)")
+    }
+    
     func testForSpecExample() throws {
         let finder = RectIntersectionFinder()
         let rects = [
@@ -81,7 +92,7 @@ class NitroMacTest_sergejpTests: XCTestCase {
         ]
         
         let intersections = finder.find(in: rects)
-        print("Intersections: \(intersections.count)\n \(intersections)")
+        print("Intersections: \(intersections.count) \n\(intersections)")
         
         // check cases from the spec
         // Between rectangle 1 and 3 at (140,160), w=210, h=20.
@@ -252,16 +263,16 @@ class NitroMacTest_sergejpTests: XCTestCase {
                        "Computed intersections do not correspond to the list of correct intersections defined by hand")
     }
     
-    func testFindRectIntersectionRandom() throws {
+    func testPerformanceIntersection() throws {
         let processor = RectIntersectionFinder()
         var rects = [Rect]()
-        let rectNum = 50
+        let rectNum = 10
         for i in 1...rectNum {
             let rect = Rect(id: UInt(i),
-                            x: Int.random(in: -1000...1000),
-                            y: Int.random(in: -1000...1000),
-                            w: UInt.random(in: 0...1000),
-                            h: UInt.random(in: 0...1000))
+                            x: 10 + i,
+                            y: 10 + i,
+                            w: 1000,
+                            h: 1000)
             rects.append(rect)
         }
         

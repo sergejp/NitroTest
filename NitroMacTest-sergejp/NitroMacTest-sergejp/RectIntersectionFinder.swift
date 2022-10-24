@@ -12,8 +12,8 @@ struct RectIntersectionFinder {
     func find(in rects: [Rect]) -> Set<RectIntersection> {
         // duplicates will be dismissed automatically with a Set
         var result = Set<RectIntersection>()
-        
         var elements = Array(rects[...])
+        var rectsWithIntersections = Set<Rect>()
         // first pass computes basic intersections between rects
         // i.e. rect pairs with common areas
         // O(n^2)
@@ -26,24 +26,34 @@ struct RectIntersectionFinder {
                 let newIntersection = RectIntersection(area: area, rects: [r1, r2])
                 // O(1) on avg
                 result.insert(newIntersection)
+                // O(1) on avg
+                rectsWithIntersections.insert(r1)
+                rectsWithIntersections.insert(r2)
             }
         }
         
         // second pass computes intersections between rects and intersections
         // already in the result
-        elements = Array(rects[...])
         var intersections = Set(result[...])
         
-        // Correctness comes from the fact that this is exhaustive search
-        // as it goes through ALL intersections progressively and checks each of them
+        // Correctness
+        // Comes from the fact that this is exhaustive search as it goes
+        // through ALL intersections progressively and checks each of them
         // against ALL rects available
         //
-        // Time complexity for this one is tricky, leaving it until
-        // the whole solution is ready and I can dedicate some time for computing it
-        // might be exponential or smh
-        //
+        // Time complexity
+        // The number of max intersections between rects grows ~exponentially
+        // It is basically a number of possible combinations where we make
+        // unordered selection like (rect1, rect2), (rect1, rect2, rect3), ... (rect1, rect2, ... rectN)
+        // So for 3 rects it is 4 intersections max (i.e. upper bound 2^3)
+        // for 4 rects it is 11 intersections max (i.e. upper bound 2^4)
+        // for 5 rects it is 26 intersections max (i.e. upper bound 2^5)
+        // for 6 rects it is 57 intersections max (i.e. upper bound 2^6)
+        // So it seems the max number of inner loop iterations here is O(2^n * n),
+        // where `2^n` is the max number of intersections and `n` is the number of rects
+        // Ouch!
         while let intersection = intersections.popFirst() {
-            for rect in elements {
+            for rect in rectsWithIntersections {
                 // don't compute for rects which have already been added to the intersection
                 // O(1)
                 guard !intersection.rects.contains(rect) else {
